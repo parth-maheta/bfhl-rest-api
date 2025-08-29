@@ -86,5 +86,8 @@ app.post("/bfhl", (req, res) => {
     });
   }
 });
+app.get("/", (req, res) => {
+  res.send("BFHL API is running 🚀");
+});
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
