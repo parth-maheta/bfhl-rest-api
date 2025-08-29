@@ -15,8 +15,8 @@ const PORT = process.env.PORT || 3000;
 const USER_ID = `${FULL_NAME.toLowerCase()}_${DOB}`;
 
 function alternatingCapsConcat(strArr) {
-  const concatenated = strArr.join(""); // concatenate all
-  const reversed = concatenated.split("").reverse().join(""); // reverse
+  const concatenated = strArr.join("");
+  const reversed = concatenated.split("").reverse().join("");
   let result = "";
   for (let i = 0; i < reversed.length; i++) {
     result +=
