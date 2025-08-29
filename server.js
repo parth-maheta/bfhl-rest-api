@@ -25,7 +25,7 @@ function alternatingCapsConcat(strArr) {
   return result;
 }
 
-app.post("/process", (req, res) => {
+app.post("/bfhl", (req, res) => {
   try {
     const { data } = req.body;
 
@@ -47,7 +47,6 @@ app.post("/process", (req, res) => {
 
     data.forEach((item) => {
       if (/^-?\d+$/.test(item)) {
-        // numeric string
         const num = parseInt(item, 10);
         sum += num;
         if (num % 2 === 0) {
@@ -88,5 +87,4 @@ app.post("/process", (req, res) => {
   }
 });
 
-// Start server
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
